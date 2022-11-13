@@ -1,5 +1,5 @@
-# seera-qa-backend-code-challenge
-QA Backend Code Challenge - Swapnil Wandhe
+# QA Backend Code Challenge - Swapnil Wandhe
+
 
 Framework   : POM, BDD
 
