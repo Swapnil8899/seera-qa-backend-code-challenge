@@ -1,0 +1,350 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-11-12T12:02:56.045Z",
+        "line": 11,
+        "name": "Verify base currency name and code using currency list\tget API",
+        "description": "",
+        "id": "country-list-api;verify-base-currency-name-and-code-using-currency-list-get-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2325011500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User calls \"currencyListPath\" get request and validate \"currencyListSchema.json\" schema",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"currencyListPath\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"currencyListSchema.json\"",
+                  "offset": 55
+                }
+              ],
+              "location": "Step.user_calls_get_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2234300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "API is success with 200 status code",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "Step.api_is_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 387720900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "\"base.name\" is \"Saudi Riyal\" in response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"base.name\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"Saudi Riyal\"",
+                  "offset": 15
+                }
+              ],
+              "location": "Step.is_in_response_body(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20973700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"base.code\" is \"SAR\" in response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"base.code\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"SAR\"",
+                  "offset": 15
+                }
+              ],
+              "location": "Step.is_in_response_body(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-11-12T12:02:58.802Z",
+        "line": 22,
+        "name": "Verify if user is able search property carousel",
+        "description": "",
+        "id": "country-list-api;verify-if-user-is-able-search-property-carousel;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 83400000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User search property for \"2022-11-17\" \"2022-11-18\" by \"rank\" and \"DESC\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2022-11-17\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"2022-11-18\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"rank\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"DESC\"",
+                  "offset": 65
+                }
+              ],
+              "location": "Step.User_search_property_for(String,String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1358293200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User calls \"propertyCarousel\" post request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"propertyCarousel\"",
+                  "offset": 11
+                }
+              ],
+              "location": "Step.user_calls_post_request(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 177500,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "API is success with 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                }
+              ],
+              "location": "Step.api_is_success_with_status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 65791500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "\"count\" is \"4\" in response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"count\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"4\"",
+                  "offset": 11
+                }
+              ],
+              "location": "Step.is_in_response_body(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 46031000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "\"carousels.titleEn\" is \"[Most booked, Chalets with water games, New chalets, Khalid’s picks]\" in response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"carousels.titleEn\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"[Most booked, Chalets with water games, New chalets, Khalid’s picks]\"",
+                  "offset": 23
+                }
+              ],
+              "location": "Step.is_in_response_body(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-11-12T12:03:00.357Z",
+        "line": 23,
+        "name": "Verify if user is able search property carousel",
+        "description": "",
+        "id": "country-list-api;verify-if-user-is-able-search-property-carousel;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3591400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User search property for \"2022-11-10\" \"2022-11-18\" by \"rank\" and \"DESC\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2022-11-10\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"2022-11-18\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"rank\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"DESC\"",
+                  "offset": 65
+                }
+              ],
+              "location": "Step.User_search_property_for(String,String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 903862400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User calls \"propertyCarousel\" post request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"propertyCarousel\"",
+                  "offset": 11
+                }
+              ],
+              "location": "Step.user_calls_post_request(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 156000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "API is success with 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 20
+                }
+              ],
+              "location": "Step.api_is_success_with_status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8414100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "\"httpStatusCode\" is \"400\" in response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"httpStatusCode\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"400\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Step.is_in_response_body(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7139500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "\"message\" is \"Invalid check-in date: Should not be in the past\" in response body",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"message\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"Invalid check-in date: Should not be in the past\"",
+                  "offset": 13
+                }
+              ],
+              "location": "Step.is_in_response_body(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "country list API",
+    "description": "",
+    "id": "country-list-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/almosafarHome.feature",
+    "tags": []
+  }
+]
