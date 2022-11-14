@@ -6,7 +6,7 @@ Framework   : POM, BDD
 Liberaraies : Rest assured, Junit, Cucumber, Java, Extent report.
 
 Scenarios   : 1. Get Request :- Currency list api validating base currency, currency code and schema validation.
-              2. Post Request:- Property courousal api validating number of count and names from response body.
+              2. Post Request:- Property courousal api validating number of count and names from response body.(Post request test will run twice for valid and Invalid dates)
 
 Assertions  : Status code, Respose body fields, Schema validation.
 
